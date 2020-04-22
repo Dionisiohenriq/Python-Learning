@@ -69,6 +69,11 @@ m.pow(a, b)
 # you can convert True or False to str or number:
 print(str(True))
 print(int(True))
-
+print(1 + True)
+print(1 + False)
+print(bool(25))
+print(bool(0))
+print(bool(' '))
+print(bool(''))
 
 
