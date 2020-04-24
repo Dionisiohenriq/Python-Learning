@@ -82,7 +82,7 @@ x = int(input("insira o segundo número: "))
 
 while(x != -1):
     op = input("Insira a operação: + (soma), -(sub), *(mult), /(div), e(expo), r(squareroot), f(fatorial)\n")
-    y = int(input("Insira o segundo número: "))
+    y = int(input("Insira o primeiro número: "))
     
     if(op == '+'):
         print('Resultado = {}'.format(x + y))
@@ -95,7 +95,8 @@ while(x != -1):
     elif(op == 'e'):
         print('Resultado = {}'.format(math.pow(x, y)))
     elif(op == 'r'):
-        print('Resultado da raiz do primeiro número = {}\nResultado da raiz do segundo número = {}'.format(math.sqrt(x), math.sqrt(y)))
+        mensagem = 'Resultado da raiz do primeiro número = {}\nResultado da raiz do segundo número = {}'
+        print(mensagem.format(math.sqrt(x), math.sqrt(y)))
     elif(op == 'f'):
         def fat(fatorial):
             if(fatorial == 1):
