@@ -1,4 +1,4 @@
-# sets are like groups of data, that you can compare
+# sets are groups of data, that you can compare
 
 example = set()
 
