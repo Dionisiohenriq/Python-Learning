@@ -18,4 +18,3 @@ print(odds.union(evens)) # don't change the original set
 print(odds.intersection(primes)) # verify if the numbers in one set are contained in another
 print(2 in primes) # verify if an element is in one set
 print(9 not in primes) # verify if an element is not in a set
-
