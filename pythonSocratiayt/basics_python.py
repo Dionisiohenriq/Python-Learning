@@ -77,35 +77,34 @@
 # print(bool(''))
 
 #Exercice =  make a calculator with + * - / exponential, squareroot and fatorial
+#programa que calcula operações básicas e expoentes, raiz quadrada e fatorial
 import math
-x = int(input("insira o segundo número: "))
+x = int(input("insira o primeiro número ou -1 para sair: "))
 
 while(x != -1):
     op = input("Insira a operação: + (soma), -(sub), *(mult), /(div), e(expo), r(squareroot), f(fatorial)\n")
-    y = int(input("Insira o primeiro número: "))
+    y = int(input("Insira o segundo número: "))
     
     if(op == '+'):
-        print('Resultado = {}'.format(x + y))
+        print(f'Resultado = {x + y}')
     elif(op == '-'):
-        print('Resultado = {}'.format(x - y))
+        print(f'Resultado = {x - y}')
     elif(op == '*'):
-        print('Resultado = {}'.format(x * y))
+        print(f'Resultado = {x * y}')
     elif(op == '/'):
-        print('Resultado = {}'.format(x / y))
+        print(f'Resultado = {x / y}')
     elif(op == 'e'):
-        print('Resultado = {}'.format(math.pow(x, y)))
+        print(f'Resultado = {math.pow(x, y)}')
     elif(op == 'r'):
-        mensagem = 'Resultado da raiz do primeiro número = {}\nResultado da raiz do segundo número = {}'
-        print(mensagem.format(math.sqrt(x), math.sqrt(y)))
+        print(f'Resultado da raiz do primeiro número = {math.sqrt(x)}\nResultado da raiz do segundo número = {math.sqrt(y)}')
     elif(op == 'f'):
         def fat(fatorial):
             if(fatorial == 1):
                 return fatorial
             else:
                 return fatorial * fat(fatorial -1)
-        print("Fatorial do primeiro número = {}\nFatorial do segundo número = {}".format(fat(x), fat(y)))
+        print(f"Fatorial do primeiro número = {fat(x)}\nFatorial do segundo número = {fat(y)}")
     else:
         print("Operação inválida!")
     
-    x = int(input("Insira o primeiro número: "))
-
+    x = int(input("Insira o primeiro número ou -1 para sair: "))
