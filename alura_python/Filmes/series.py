@@ -1,4 +1,4 @@
-from Programas import Programa as prog
+from programas import Programa as prog
 from playlist import Playlist
 
 class Serie(prog):
@@ -20,7 +20,8 @@ class Serie(prog):
     def __str__(self):
         return f'{self.nome} - {self.ano} - {self.temporadas} - {self.likes}'
 
-    def adiciona_serie(self):
+    @staticmethod
+    def adiciona_serie():
         """
         Função que pega novos filmes e os adiciona a uma playlist
         """
@@ -34,13 +35,13 @@ class Serie(prog):
 
             prog.nome = adicionar_serie[0]
             prog.ano = int(adicionar_serie[1])
-            self.temporadas = int(adicionar_serie[2])
+            temporadas = int(adicionar_serie[2])
 
-            lista_series.append(Serie(prog.nome, prog.ano, self.temporadas))
+            lista_series.append(Serie(prog.nome, prog.ano, temporadas))
 
             adicionar_serie = input("Insira títutlo, ano e quantidade de temporadas, separados por vírgula, ou 0 para sair\n")
 
-        if lista_series != []:
+        if lista_series:
             minha_playlist = Playlist('nova', lista_series)
             return minha_playlist
         else:
